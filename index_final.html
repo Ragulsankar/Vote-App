@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+      integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="app.css" />
+    <title>Final selection</title>
+  </head>
+  <body>
+    <section class="container container-fluid">
+      <div class="row justify-content-center align-items-center text-center">
+        <h1 class="display-2 text-center">FINAL SELECTION</h1>
+        <div class="col-md-4 vote-1 vote-final">
+          <img src="" alt="sorry" id="myImg_1" class="img-fluid img-vote" />
+          <h2 class="text-center" id="myName_1"></h2>
+        </div>
+        <div class="col-md-4 vote-1 vote-final">
+          <img src="" alt="" class="img-fluid img-vote" id="myImg_2" />
+          <h2 class="text-center" id="myName_2"></h2>
+        </div>
+        <div class="col-md-4 vote-1 vote-final">
+          <img src="" alt="" class="img-fluid img-vote" id="myImg_3" />
+          <h2 class="text-center" id="myName_3"></h2>
+        </div>
+      </div>
+    </section>
+    <div class="d-grid gap-2 col-6 mx-auto">
+      <button
+        class="btn btn-primary"
+        type="button"
+        onclick="myFunction_submit()"
+      >
+        SUBMIT
+      </button>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+
+    <script type="text/javascript" src="javascript_final.js"></script>
+    <script>
+      function myFunction_submit() {
+        swal(
+          "Good job!",
+          "Your response is saved! . Wait for few seconds so that Page will be reloaded automatically to main page ",
+          "success"
+        );
+
+        setTimeout(function () {
+          your_func();
+        }, 2000);
+      }
+      function your_func() {
+        location.replace("index.html");
+      }
+    </script>
+  </body>
+</html>
